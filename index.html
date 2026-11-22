@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A clean and modern weather dashboard showing current weather and a seven-day forecast.">
+    <title>Atmos - Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="header">
+            <a href="#" class="logo">
+                <span class="logo-icon">◉</span>
+                <span>atmos<span class="logo-dot">.</span></span>
+            </a>
+
+            <div class="header-location">
+                <span class="location-dot"></span>
+                <span>WEATHER DASHBOARD</span>
+            </div>
+        </header>
+
+        <main>
+
+            <!-- Intro -->
+            <section class="intro">
+                <p class="eyebrow">YOUR DAILY WEATHER COMPANION</p>
+                <h1>Weather, at a glance<span>.</span></h1>
+                <p class="intro-description">
+                    A little insight into the sky above you.
+                </p>
+            </section>
+
+            <!-- Search -->
+            <section class="search-section">
+                <form class="search-form" id="search-form">
+                    <div class="search-input-wrapper">
+                        <label for="city-search">Search location</label>
+                        <input
+                            type="text"
+                            id="city-search"
+                            placeholder="Enter a city name..."
+                            autocomplete="off"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="search-button">
+                        Search
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </form>
+
+                <p class="search-message" id="search-message" role="status" aria-live="polite"></p>
+            </section>
+
+            <!-- Current Weather -->
+            <section class="current-section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">RIGHT NOW</p>
+                        <h2>Current weather</h2>
+                    </div>
+
+                    <span class="live-indicator">
+                        <span></span> SAMPLE DATA
+                    </span>
+                </div>
+
+                <article class="current-card">
+
+                    <div class="current-main">
+                        <div class="current-location">
+                            <span class="location-icon">⌖</span>
+                            <h3 class="city-name" id="city-name">Ranchi, India</h3>
+                        </div>
+
+                        <p class="current-date" id="current-date">
+                            Sunday, November 22
+                        </p>
+
+                        <div class="temperature-wrapper">
+                            <h2 class="current-temp" id="current-temp">24°</h2>
+                            <span class="weather-icon" id="weather-icon" aria-label="Partly cloudy">🌤️</span>
+                        </div>
+
+                        <p class="weather-condition" id="weather-condition">
+                            Partly Cloudy
+                        </p>
+
+                        <p class="feels-like" id="feels-like">
+                            Feels like 26°
+                        </p>
+                    </div>
+
+                    <div class="current-divider"></div>
+
+                    <div class="weather-details">
+
+                        <div class="detail-item">
+                            <span class="detail-icon">↗</span>
+                            <div>
+                                <p class="detail-label">WIND SPEED</p>
+                                <h3 id="wind-speed">12 km/h</h3>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <span class="detail-icon">◌</span>
+                            <div>
+                                <p class="detail-label">HUMIDITY</p>
+                                <h3 id="humidity">65%</h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+            </section>
+
+            <!-- Forecast -->
+            <section class="forecast-section">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">PLAN AHEAD</p>
+                        <h2>7-day forecast</h2>
+                    </div>
+
+                    <span class="forecast-unit">TEMPERATURE · °C</span>
+                </div>
+
+                <div class="forecast-grid" id="forecast-grid">
+
+                    <!-- Forecast cards are generated through JavaScript -->
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with care, for clearer days.</p>
+            <p>ATMOS <span>©</span> 2026</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

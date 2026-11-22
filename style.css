@@ -1,0 +1,664 @@
+
+/* =========================================
+   1. COLOR VARIABLES
+========================================= */
+
+:root {
+    /* Background */
+    --bg-primary: #F5F6F8;
+    --bg-card: #FFFFFF;
+    --bg-secondary: #EEF2F7;
+
+    /* Brand Colors */
+    --color-primary: #253D5B;
+    --color-accent: #6688AB;
+    --color-accent-light: #E8F0F8;
+
+    /* Text Colors */
+    --text-primary: #202C3A;
+    --text-secondary: #788594;
+    --text-light: #A4AFBA;
+    --text-white: #FFFFFF;
+
+    /* Borders */
+    --border-color: #E7EBF0;
+
+    /* Status */
+    --success-color: #5A987A;
+
+    /* Shadows */
+    --shadow-card: 0 8px 30px rgba(34, 54, 78, 0.045);
+
+    /* Other */
+    --radius-card: 18px;
+    --radius-small: 10px;
+}
+
+
+/* =========================================
+   2. RESET & GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+/* =========================================
+   3. HEADER
+========================================= */
+
+.header {
+    min-height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    color: var(--color-accent);
+}
+
+.logo-dot {
+    color: var(--color-accent);
+}
+
+.header-location {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--text-secondary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.location-dot {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: var(--success-color);
+}
+
+
+/* =========================================
+   4. INTRO SECTION
+========================================= */
+
+.intro {
+    padding: 65px 0 32px;
+}
+
+.eyebrow {
+    color: var(--color-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.intro h1 {
+    font-size: clamp(30px, 5vw, 45px);
+    letter-spacing: -2px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.intro h1 span {
+    color: var(--color-accent);
+}
+
+.intro-description {
+    margin-top: 12px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+
+/* =========================================
+   5. SEARCH SECTION
+========================================= */
+
+.search-section {
+    margin-bottom: 48px;
+}
+
+.search-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    max-width: 600px;
+}
+
+.search-input-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.search-input-wrapper label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-small);
+    outline: none;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 13px;
+    transition: border-color 0.2s;
+}
+
+.search-input-wrapper input::placeholder {
+    color: var(--text-light);
+}
+
+.search-input-wrapper input:focus {
+    border-color: var(--color-accent);
+}
+
+.search-button {
+    height: 48px;
+    padding: 0 23px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: none;
+    border-radius: var(--radius-small);
+    background-color: var(--color-primary);
+    color: var(--text-white);
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.search-button:hover {
+    background-color: var(--color-accent);
+}
+
+.search-button span {
+    font-size: 18px;
+}
+
+.search-message {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    min-height: 18px;
+}
+
+
+/* =========================================
+   6. SECTION HEADINGS
+========================================= */
+
+.current-section,
+.forecast-section {
+    margin-bottom: 45px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 5px;
+}
+
+.section-heading h2 {
+    font-size: 21px;
+    letter-spacing: -0.6px;
+    font-weight: 700;
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--text-secondary);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+}
+
+.live-indicator span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--success-color);
+}
+
+.forecast-unit {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    padding-bottom: 5px;
+}
+
+
+/* =========================================
+   7. CURRENT WEATHER CARD
+========================================= */
+
+.current-card {
+    display: grid;
+    grid-template-columns: 1.5fr 1px 1fr;
+    align-items: center;
+    gap: 40px;
+    min-height: 270px;
+    padding: 35px 42px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+}
+
+.current-location {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.location-icon {
+    font-size: 21px;
+    color: var(--color-accent);
+}
+
+.city-name {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.current-date {
+    margin-top: 5px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.temperature-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 12px;
+}
+
+.current-temp {
+    font-size: clamp(65px, 9vw, 88px);
+    line-height: 1;
+    letter-spacing: -6px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.weather-icon {
+    font-size: 52px;
+}
+
+.weather-condition {
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.feels-like {
+    margin-top: 3px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.current-divider {
+    height: 150px;
+    width: 1px;
+    background-color: var(--border-color);
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-left: 10px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.detail-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background-color: var(--bg-secondary);
+    color: var(--color-accent);
+    font-size: 23px;
+}
+
+.detail-label {
+    color: var(--text-secondary);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.detail-item h3 {
+    margin-top: 3px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   8. FORECAST CARDS
+========================================= */
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.forecast-card {
+    min-width: 0;
+    padding: 19px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.forecast-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+}
+
+.forecast-day {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.forecast-icon {
+    font-size: 27px;
+    margin: 15px 0;
+}
+
+.forecast-condition {
+    font-size: 9px;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+.forecast-temp {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.forecast-max {
+    color: var(--text-primary);
+}
+
+.forecast-min {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+
+/* =========================================
+   9. FOOTER
+========================================= */
+
+.footer {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 11px;
+}
+
+.footer p:last-child {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer span {
+    color: var(--color-accent);
+}
+
+
+/* =========================================
+   10. TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .app-container {
+        padding: 0 28px;
+    }
+
+    .current-card {
+        gap: 25px;
+        padding: 30px;
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   11. MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .app-container {
+        padding: 0 18px;
+    }
+
+    .header {
+        min-height: 70px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .header-location {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+
+    .intro {
+        padding: 45px 0 28px;
+    }
+
+    .intro h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .intro-description {
+        font-size: 13px;
+    }
+
+    .search-section {
+        margin-bottom: 38px;
+    }
+
+    .search-form {
+        gap: 8px;
+    }
+
+    .search-button {
+        padding: 0 15px;
+        gap: 8px;
+    }
+
+    .section-heading h2 {
+        font-size: 19px;
+    }
+
+    .current-card {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 26px 22px;
+    }
+
+    .current-divider {
+        width: 100%;
+        height: 1px;
+    }
+
+    .current-temp {
+        font-size: 72px;
+    }
+
+    .weather-icon {
+        font-size: 43px;
+    }
+
+    .weather-details {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        gap: 12px;
+    }
+
+    .detail-item {
+        gap: 9px;
+    }
+
+    .detail-icon {
+        height: 36px;
+        width: 36px;
+        font-size: 19px;
+    }
+
+    .detail-item h3 {
+        font-size: 14px;
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .forecast-card {
+        padding: 17px 8px;
+    }
+
+    .forecast-icon {
+        font-size: 30px;
+    }
+
+    .forecast-day {
+        font-size: 12px;
+    }
+
+    .forecast-condition {
+        font-size: 10px;
+    }
+
+    .footer {
+        gap: 10px;
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================
+   12. SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .app-container {
+        padding: 0 13px;
+    }
+
+    .header-location {
+        font-size: 7px;
+    }
+
+    .current-card {
+        padding: 22px 16px;
+    }
+
+    .detail-item {
+        gap: 6px;
+    }
+
+    .detail-label {
+        font-size: 8px;
+    }
+
+}
