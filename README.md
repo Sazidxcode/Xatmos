@@ -13,7 +13,7 @@
 
 ## 📖 About The Project
 
-**Atmos** is a minimal and modern weather dashboard built using HTML, CSS and Vanilla JavaScript.
+**Xatmos** is a minimal and modern weather dashboard built using HTML, CSS and Vanilla JavaScript.
 
 The project focuses on presenting weather information through a clean interface with carefully balanced spacing, typography and a simple colour palette.
 
