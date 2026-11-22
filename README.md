@@ -1,5 +1,5 @@
 
-# 🌤️ Atmos — Weather Dashboard
+# 🌤️ Xatmos — Weather Dashboard
 
 > A clean, modern and responsive weather dashboard designed to make everyday weather information simple and accessible.
 
